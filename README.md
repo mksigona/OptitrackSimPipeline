@@ -1,1 +1,1 @@
-# SlicerkWaveSims
+# OptitrackSimPipeline
