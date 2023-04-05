@@ -12,7 +12,7 @@ OptitrackSimPipeline is a repository that describes a workflow to position a foc
 - MATLAB ([Getting Started with MATLAB](https://www.mathworks.com/help/matlab/getting-started-with-matlab.html))
 - [k-Wave](http://www.k-wave.org/)  
 - [3D Slicer](https://download.slicer.org/) 
-- GPU for accelerated acoustic simulations 
+- GPU (optional but highly recommended for accelerated acoustic simulations) 
 
 ## Remarks
 If you found OptitrackSimPipeline useful, please consider citing the following paper:
