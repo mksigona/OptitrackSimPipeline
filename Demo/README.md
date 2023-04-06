@@ -14,10 +14,9 @@ A video walkthrough of the examples are also available here.
   - Switch to the “Transforms” module and under the “Active Transform” drop-down list select “Create a new linear transformation”
     - **Note:** it is recommended to create two separate transformations for the rotation and translation of the transducer model
 7. Add the transducer model to the transform hierarchy and manually rotate and translate the transducer model so that the transducer model aligns with the visible transducer surface in the T1-weighted MR image  
-
-<br> 8. Translate the transducer model so that the cube indicating the geometric focus of the transducer aligns with the predicted focus from optical tracking 
+8. Translate the transducer model so that the cube indicating the geometric focus of the transducer aligns with the predicted focus from optical tracking 
     - **Note:** the transducer surface may no longer align with visible surface from the MR image if a bias correction was applied to the translation between the ultasound focus location and the transducer tracker, which is the case for this example dataset
-<br> 9. If two separate transformations were created, move the two transforms outside of the hierarchy and harden the innermost transformation. 
+9. If two separate transformations were created, move the two transforms outside of the hierarchy and harden the innermost transformation. 
 
 Example of <sup>U</sup>T<sub>S</sub> are included in the "\Transform Creation Example\" folder. 
 - "T_SimulationToUltrasound_Rot.h5" and "T_SimulationToUltrasound_Trans.h5" are the two transformations used to manually align the transducer model to the T1-weighted image
