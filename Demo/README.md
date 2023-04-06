@@ -1,5 +1,5 @@
 # User Guide + Example Instructions
-A video walkthrough of the examples are also available here. 
+A video walkthrough of the examples are available here. 
 
 ## Ultrasound to Simulation Space Transformation (<sup>U</sup>T<sub>S</sub>) Creation
 1. Create NIFTI file of transducer model using the [xdcrMask MATLAB script](../Scripts/makeXdcr.m) (makeXdcr.m)
@@ -31,4 +31,5 @@ Example of <sup>U</sup>T<sub>S</sub> are included in the "\Transform Creation Ex
 5. Set "Reference Image" as the hardened transducer model and "Image To Warp" as the image volume. Repeat as many times as required to set up your medium for simulations. Create a new volume for the "Output Image". 
 6. Save the resampled volumes and the transducer models (hardened and non-hardened) 
 7. Run the [simulation script](../Scripts/Slicer2Kwave.m) in MATLAB (Slicer2Kwave.m)
+8. Import the output file from the Slicer2Kwave.m script into Slicer and add it to the transform hierarchy. The simulations are now available for analysis in 3D Slicer.  
 
