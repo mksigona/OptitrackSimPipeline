@@ -23,7 +23,12 @@ Example of <sup>U</sup>T<sub>S</sub> are included in the "\Transform Creation Ex
 - "T_SimulationToUltrasound.h5" is the final combined transformation 
 
 ## Pipeline Demonstration using an *ex vivo* Skull Cap Dataset
-1. Load all files in "\Exvivo Dataset\Optical Tracking Data\" folder into Slicer. Under "Transform Hierarchy" of the data module, arrange the linear transformations into the hierarchy: 
-<br>![Screenshot of the transformation hierarchy in 3D Slicer for the ex vivo optical tracking dataset](https://user-images.githubusercontent.com/54997782/230184704-fa700cbe-dad2-426f-8e5d-45857644d5e1.png)
-
+1. Load all files in "\Exvivo Dataset\Optical Tracking Data\" folder into Slicer. Under "Transform Hierarchy" of the data module, arrange the linear transformations into the correct hierarchy: 
+<br>![Screenshot of the transformation hierarchy in 3D Slicer for the ex vivo optical tracking dataset](https://user-images.githubusercontent.com/54997782/230414869-f3b17df3-4830-475f-becc-263ef2973fa3.png)
+2. Select the "Subject Hierarchy" tab and right click on the transducer model volume and select "Clone". 
+3. Navigate back to "Trasnform Hierarchy" and right click on the original transducer model volume in the hierarchy and select "Harden transform".
+4. Switch to the "Resample Image (BRAINS)" module 
+5. Set "Reference Image" as the hardened transducer model and "Image To Warp" as the image volume. Repeat as many times as required to set up your medium for simulations. Create a new volume for the "Output Image". 
+6. Save the resampled volumes and the transducer models (hardened and non-hardened) 
+7. Run the [simulation script](Scripts/Slicer2Kwave.m) in MATLAB (Slicer2Kwave.m)
 
