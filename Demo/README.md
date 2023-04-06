@@ -2,7 +2,7 @@
 A video walkthrough of the examples are also available here. 
 
 ## Ultrasound to Simulation Space Transformation (<sup>U</sup>T<sub>S</sub>) Creation
-1. Create NIFTI file of transducer model using the [xdcrMask MATLAB script](Scripts/makeXdcr.m) (makeXdcr.m)
+1. Create NIFTI file of transducer model using the [xdcrMask MATLAB script](./Scripts/makeXdcr.m) (makeXdcr.m)
 2. Load all files in "\Transform Creation Example\Optical Tracking Data\" folder into Slicer. Under "Transform Hierarchy" of the data module, arrange the linear transformations into the correct hierarchy shown here: 
 <br>![Screenshot of the transformation hierarchy in 3D Slicer for an optical tracking dataset.](https://user-images.githubusercontent.com/54997782/230184601-78580f92-6623-4a86-8cd0-966a4c640781.png)
 3. Import “xdcrMask.nii.gz” into 3D Slicer
