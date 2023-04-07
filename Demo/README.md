@@ -45,7 +45,7 @@ A video walkthrough of the examples are available here.
     - **T_UltrasoundToTracker.h5** - transformation from ultrasound to tracker space
     - **T_SimulationToUltrasound.h5** - transformation simulation to ultrasound space
     - **T1WeightedScan.nii.gz** - MR image 
-    - **CTscan.nii.gz" - CT image, already registered to the MR image 
+    - **CTscan.nii.gz** - CT image, already registered to the MR image 
     - **xdcrMask.nii.gz** - transducer model from [makeXdcr.m](../Scripts/makeXdcr.m)
 
 ### Instructions
