@@ -6,7 +6,7 @@ A video walkthrough of the examples are available here.
 - **xdcrMask.nii.gz** - transducer model from [makeXdcr.m](../Scripts/makeXdcr.m)
 - **T_SimulationToUltrasound_Rot.h5** - transformation to manually rotate the transducer model to align with the visible transducer surface in the T1-weighted MR image
 - **T_SimulationToUltrasound_Trans.h5** - transformation used to manually translate the transducer model to the predicted focus from optical tracking
-- **"T_SimulationToUltrasound.h5"** - final combined transformation 
+- **T_SimulationToUltrasound.h5** - final combined transformation 
 - **Optical Tracking Data** folder:
     - **GeometricFocus.vtk** - sphere model to represent the geometric focus location 
     - **T_PhysicalToImage.h5** - transformation from physical to image space 
