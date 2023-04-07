@@ -1,4 +1,4 @@
-% Last Updated: 20230406
+% Last Updated: 20230407
 % MATLAB Version: R2022a 
 % k-Wave Version: Version 1.4
 % Script created by: Thomas J. Manuel & Michelle K. Sigona
@@ -30,7 +30,7 @@ if isfile('CTsimspace.nii.gz')
     ct.data = niftiread('CTsimspace.nii.gz');
     ct.info = niftiinfo('CTsimspace.nii.gz'); 
 else
-    [ct_fname,path] = uigetfile('*.nii.gz');
+    [ct_fname,path] = uigetfile('*.nii.gz','Select CT Volume');
     ct.data = niftiread([path ct_fname]); 
     ct.info = niftiinfo([path ct_fname]); 
 end
@@ -40,7 +40,8 @@ end
 if isfile('xdcrMask_Hardened.nii.gz')
     xdcr = niftiread('xdcrMask_Hardened.nii.gz'); 
 else
-    [xdcr_fname,path] = uigetfile('*.nii.gz');
+    [xdcr_fname,path] = uigetfile('*.nii.gz',['Select Transducer ' ...
+        'Volume (Hardened)']);
     xdcr = niftiread([path xdcr_fname]); 
 end
 
@@ -119,7 +120,8 @@ ylabel('X [mm]');
 if isfile('xdcrMask.nii.gz')
     info = niftiinfo('xdcrMask.nii.gz'); 
 else
-    [xdcr_fname,path] = uigetfile('*.nii.gz','Select file for header info');
+    [xdcr_fname,path] = uigetfile('*.nii.gz',['Select Transducer' ...
+        ' Volume for Header Info']);
     info = niftiinfo([path xdcr_fname]); 
 end
 
