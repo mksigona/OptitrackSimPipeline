@@ -17,18 +17,22 @@ fnout = 'prms_output';
 
 % Set transducer properties
 f0 = 802e3;               % Frequency [Hz]
-Amp = 282100;             % Amplitude at element surface
+Amp = 1000;             % Amplitude at element surface
 
 gpu_flag = 1;             % Flag for GPU-accelerated simulations
                           %     0 = Run on CPU
                           %     1 = Run on GPU
+addon = '';               % Add-on is used for vector-corrected 
+                          % simulations, where files should all follow
+                          % similar naming convention. Reference github for
+                          % details. 
 
 %% Load files
 % Load CT volume. If filename is changed it will prompt to select the
 % correct file. 
-if isfile('CTsimspace.nii.gz')
-    ct.data = niftiread('CTsimspace.nii.gz');
-    ct.info = niftiinfo('CTsimspace.nii.gz'); 
+if isfile(['CTsimspace' addon '.nii.gz'])
+    ct.data = niftiread(['CTsimspace' addon '.nii.gz']);
+    ct.info = niftiinfo(['CTsimspace' addon '.nii.gz']); 
 else
     [ct_fname,path] = uigetfile('*.nii.gz','Select CT Volume');
     ct.data = niftiread([path ct_fname]); 
@@ -37,8 +41,8 @@ end
 
 % Load transducer model. If filename is changed it will prompt to select 
 % correct file. 
-if isfile('xdcrMask_Hardened.nii.gz')
-    xdcr = niftiread('xdcrMask_Hardened.nii.gz'); 
+if isfile(['xdcrMask' addon '_Hardened.nii.gz'])
+    xdcr = niftiread(['xdcrMask' addon '_Hardened.nii.gz']); 
 else
     [xdcr_fname,path] = uigetfile('*.nii.gz',['Select Transducer ' ...
         'Volume (Hardened)']);
@@ -46,12 +50,11 @@ else
 end
 
 %% Setup medium properties
-% There are severeal methods to convert from HU -> medium properties and we
-% recommended filling in this section with methods and values that seem 
-% fit. The function we used in this work can be found under Scripts 
-% (getAcousticProperties.m). Here, we load previously converted medium 
-% properties. 
-load('demo_medium.mat');
+% There are severeal methods to convert from HU -> medium properties. We
+% included our function under scripts (getAcousticProperties.m) but full 
+% details are outside the scope of this demo. For convienience, we load 
+% previously converted medium properties. 
+load(['demo' addon '_medium.mat']);
 
 %% Setup k-Wave parameters
 dim = ct.info.ImageSize;
@@ -129,4 +132,4 @@ end
 info.Datatype = 'single';
 
 % Write volume
-niftiwrite(pout_rms,fnout,info,'Compressed',true); 
+niftiwrite(pout_rms,[fnout addon],info,'Compressed',true); 

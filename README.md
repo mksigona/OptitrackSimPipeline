@@ -1,6 +1,6 @@
 # OptitrackSimPipeline
 ## Authors 
-This library was created by Michelle K. Sigona with significant contribution from Thomas J. Manuel, part of Dr Charles F. Caskey's lab group at Vanderbilt University. Contact: michelle.k.sigona@vanderbilt.edu
+This repository was created by Michelle K. Sigona with significant contribution from Thomas J. Manuel, part of Dr Charles F. Caskey's lab group at Vanderbilt University. Contact: michelle.k.sigona@vanderbilt.edu
 
 ## Overview 
 OptitrackSimPipeline is a repository that describes a workflow to position a focused ultrasound transducer in acoustic simulations informed by optical tracking transformations for transcranial focused ultrasound procedures. OptitrackSimPipeline uses completely open-source software tools for ease of use by other researchers. This repository includes: 
