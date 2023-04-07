@@ -71,9 +71,9 @@ A video walkthrough of the examples are available here.
 
 ### Instructions
 1. Run [vectorCorrection.m](../Scripts/vectorCorrection.m)
-2. Load the *ex vivo* dataset. Steps 1-3 from the [example section](https://github.com/mksigona/OptitrackSimPipeline/edit/main/Demo/README.md#pipeline-demonstration-using-an-ex-vivo-skull-cap-dataset)
+2. Load the *ex vivo* dataset. Steps 1-3 from the [previous section](https://github.com/mksigona/OptitrackSimPipeline/tree/main/Demo#instructions-1)
 3. Load the output transformation (T_VectorCorrection.txt) from step 1 into Slicer. Under the "Description" drop-down select "Transform" 
 4. Apply the vector corrected transformation to the entire exisiting hierarchy 
 <br>![Screenshot of the transformation hierarchy in 3D Slicer for the ex vivo optical tracking dataset applying vector correction.](https://user-images.githubusercontent.com/54997782/230636726-fceb3d19-5aaa-4290-b347-6559f7a15d7c.png)
-5. Repeat Steps 4-8 from the [previous section](https://github.com/mksigona/OptitrackSimPipeline/edit/main/Demo/README.md#pipeline-demonstration-using-an-ex-vivo-skull-cap-dataset)
+5. Repeat Steps 4-8 from the [previous section](https://github.com/mksigona/OptitrackSimPipeline/tree/main/Demo#instructions-1)
     - **Note**: The naming convention for the vector-corrected files should include an add-on to the existing filenames so that the simulation script identifies files correctly. E.g. "CTsimspace.nii.gz" -> "CTsimspaceCorrected.nii.gz" and "xdcrMask_Hardened.nii.gz" -> "xdcrMaskCorrected_Hardened.nii.gz"
